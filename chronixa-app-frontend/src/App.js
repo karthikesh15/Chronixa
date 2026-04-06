@@ -16,7 +16,7 @@ function App() {
   const handlePredict = async () => {
     try {
       setLoading(true);
-      const res = await axios.post('http://localhost:5000/predict', {
+      const res = await axios.post('https://chronixa-ai.onrender.com/predict', {
         features: Object.fromEntries(
           Object.entries(formData).map(([k, v]) => [k, Number(v)])
         )
